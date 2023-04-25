@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 
 @Dao
 interface NoteDao {
@@ -11,10 +12,13 @@ interface NoteDao {
     fun insert(note: Note)
     @Query("SELECT * FROM Note")//seleciona tudo
     fun list(): List<Note>
- /*
+
     @Delete
     fun delete(note: Note)
 
+    @Update
+    fun update(note: Note)
+ /*
     @Query("SELECT * FROM Note WHERE id = :id LIMIT 1")//traz somente 1
     fun get(id: Int): Note
     */
